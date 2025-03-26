@@ -11,3 +11,4 @@ class Pet(db.Model):
     age = db.Column(db.Integer, nullable=True)
     owner_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     owner = db.relationship('User', backref='pets')
+
